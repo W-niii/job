@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>王同学的个人网站</title>
+    <style>
+        /* 全局样式：所有字体默认仿宋、黑色 */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "仿宋", FangSong, serif; /* 兼容不同浏览器的仿宋字体 */
+            color: #000; /* 基础文字颜色（除欢迎语外均为黑色） */
+            line-height: 1.8; /* 行高优化可读性 */
+        }
+        /* 1. 欢迎横幅：背景图+白色文字 */
+        .welcome-banner {
+            height: 220px; /* 横幅高度可调整 */
+            background: url("背景图.jpg") no-repeat center center; /* 【替换点1】请将bg.jpg替换为您的背景图片文件名 */
+            background-size: cover; /* 背景图自适应容器 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 32px; /* 欢迎语字体大小 */
+            color: #fff; /* 欢迎语白色 */
+            font-weight: bold; /* 文字加粗 */
+        }
+        /* 2. 首页导航栏：青翠色长条 */
+        .home-nav {
+            background-color: #2ecc71; /* 青翠色（可替换为#27ae60更浅） */
+            padding: 12px 0;
+            font-size: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        /* 3. 个人资料区：头像+信息（Flex布局） */
+        .profile-section {
+            display: flex;
+            align-items: flex-start;
+            gap: 30px; /* 头像与信息的间距 */
+            padding: 20px 40px;
+        }
+        /* 头像样式：隐藏"头像"文字，仅显示图片 */
+        .avatar {
+            width: 180px;
+            height: 180px;
+            object-fit: cover; /* 保持图片比例不拉伸 */
+            border: 2px solid #eee; /* 可选：添加边框更精致 */
+        }
+        /* 个人信息文字样式 */
+        .profile-info p {
+            margin: 8px 0;
+            font-size: 19px;
+        }
+        /* 4. 内容模块通用样式：标题+蔚蓝色方块 */
+        .content-section {
+            padding: 0 40px;
+            margin: 20px 0;
+        }
+        .section-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+        /* 蔚蓝色方块（校园生活/技能/项目通用） */
+        .blue-card {
+            background-color: #3498db; /* 蔚蓝色（可替换为#2980b9更深） */
+            padding: 15px 30px;
+            margin: 5px 0;
+            border-radius: 4px; /* 可选：圆角更柔和 */
+        }
+        /* 技能模块：双列布局 */
+        .skills-container {
+            display: flex;
+            gap: 20px; /* 两个技能卡片的间距 */
+        }
+        /* 5. 列表样式优化（保留手绘的项目符号） */
+        ul {
+            list-style-type: disc; /* 保持默认圆点符号 */
+            padding-left: 25px; /* 调整列表缩进 */
+        }
+        li {
+            margin: 6px 0;
+            font-size: 17px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 1. 欢迎横幅 -->
+    <div class="welcome-banner">
+        欢迎来到我的个人网站
+    </div>
+    
+    <!-- 2. 首页导航条 -->
+    <div class="home-nav">
+        首页
+    </div>
+    
+    <!-- 3. 个人资料区（头像+信息） -->
+    <div class="profile-section">
+        <!-- 头像：【替换点2】请将avatar.jpg替换为您的头像文件名 -->
+        <img src="纯牛马.jpg" alt="王同学的头像" class="avatar">
+        <div class="profile-info">
+            <p>姓名: 王同学</p>
+            <p>学校: 山东师范大学</p>
+            <p>兴趣爱好: 音乐, 电影, 旅游, 剪辑, 乒乓球</p>
+            <p>特长: 剪辑, 编程</p>
+            <p>家乡: 山东·临沂</p>
+        </div>
+    </div>
+    
+    <!-- 4. 校园生活模块 -->
+    <div class="content-section">
+        <div class="section-title">校园生活</div>
+        <div class="blue-card">
+            <ul>
+                <li>班级心理委员</li>
+                <li>图书馆志愿者</li>
+                <li>实验中心志愿者</li>
+            </ul>
+        </div>
+    </div>
+    
+    <!-- 5. 技能模块（双列蔚蓝色方块） -->
+    <div class="content-section">
+        <div class="section-title">技能</div>
+        <div class="skills-container">
+            <div class="blue-card">
+                <ul>
+                    <li>视频剪辑</li>
+                    <li>PS</li>
+                    <li>剪映</li>
+                </ul>
+            </div>
+            <div class="blue-card">
+                <ul>
+                    <li>编程</li>
+                    <li>C语言</li>
+                    <li>Python</li>
+                    <li>Java</li>
+                    <li>C++</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 6. 项目及证书模块 -->
+    <div class="content-section">
+        <div class="section-title">项目及证书</div>
+        <div class="blue-card">
+            <ul>
+                <li>CET 4</li>
+                <li>蓝桥杯</li>
+                <li>叶圣陶杯</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
+
